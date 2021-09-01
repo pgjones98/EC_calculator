@@ -127,7 +127,7 @@ function calculateValues() {
   var flow4_blm_g = ((flow4_blm_out2)/blm_EC).toFixed(1);
   var flow5_blm_g = ((flow5_blm_out2)/blm_EC).toFixed(1);
   var flow6_blm_g = ((flow6_blm_out2)/blm_EC).toFixed(1);
-    var flow7_blm_g = ((flow7_blm_out2)/blm_EC).toFixed(1);
+  var flow7_blm_g = ((flow7_blm_out2)/blm_EC).toFixed(1);
 
     if (input.elements["type"].value == "DtL")
     {
@@ -142,16 +142,24 @@ function calculateValues() {
         ptA.elements["flow6_out1"].value = flow6_ptA_g;
         ptA.elements["flow7_out1"].value = flow7_ptA_g;
         
-        ptA.elements["veg1_out1"].value = veg1_ptA_g;
-        ptA.elements["veg2_out1"].value = veg2_ptA_g;
-        ptA.elements["veg3_out1"].value = veg3_ptA_g;
-        ptA.elements["flow1_out1"].value = flow1_ptA_g;
-        ptA.elements["flow2_out1"].value = flow2_ptA_g;
-        ptA.elements["flow3_out1"].value = flow3_ptA_g;
-        ptA.elements["flow4_out1"].value = flow4_ptA_g;
-        ptA.elements["flow5_out1"].value = flow5_ptA_g;
-        ptA.elements["flow6_out1"].value = flow6_ptA_g;
-        ptA.elements["flow7_out1"].value = flow7_ptA_g;
+        ptB.elements["veg1_out1"].value = veg1_ptB_g;
+        ptB.elements["veg2_out1"].value = veg2_ptB_g;
+        ptB.elements["veg3_out1"].value = veg3_ptB_g;
+        ptB.elements["flow1_out1"].value = flow1_ptB_g;
+        ptB.elements["flow2_out1"].value = flow2_ptB_g;
+        ptB.elements["flow3_out1"].value = flow3_ptB_g;
+        ptB.elements["flow4_out1"].value = flow4_ptB_g;
+        ptB.elements["flow5_out1"].value = flow5_ptB_g;
+        ptB.elements["flow6_out1"].value = flow6_ptB_g;
+        ptB.elements["flow7_out1"].value = flow7_ptB_g;
+
+        bloom.elements["flow1_out1"].value = flow1_blm_g;
+        bloom.elements["flow2_out1"].value = flow2_blm_g;
+        bloom.elements["flow3_out1"].value = flow3_blm_g;
+        bloom.elements["flow4_out1"].value = flow4_blm_g;
+        bloom.elements["flow5_out1"].value = flow5_blm_g;
+        bloom.elements["flow6_out1"].value = flow6_blm_g;
+        bloom.elements["flow7_out1"].value = flow7_blm_g;
     }
     else if (input.elements["type"].value == "conc")
     {
@@ -165,6 +173,28 @@ function calculateValues() {
       ptA.elements["flow5_out1"].value = flow5_ptA_g/ptA_mLc;
       ptA.elements["flow6_out1"].value = flow6_ptA_g/ptA_mLc;
       ptA.elements["flow7_out1"].value = flow7_ptA_g/ptA_mLc;
+
+      ptB.elements["veg1_out1"].value = veg1_ptA_g/ptA_mLc;
+      ptB.elements["veg2_out1"].value = veg2_ptA_g/ptA_mLc;
+      ptB.elements["veg3_out1"].value = veg3_ptA_g/ptA_mLc;
+      ptB.elements["flow1_out1"].value = flow1_ptA_g/ptA_mLc;
+      ptB.elements["flow2_out1"].value = flow2_ptA_g/ptA_mLc;
+      ptB.elements["flow3_out1"].value = flow3_ptA_g/ptA_mLc;
+      ptB.elements["flow4_out1"].value = flow4_ptA_g/ptA_mLc;
+      ptB.elements["flow5_out1"].value = flow5_ptA_g/ptA_mLc;
+      ptB.elements["flow6_out1"].value = flow6_ptA_g/ptA_mLc;
+      ptB.elements["flow7_out1"].value = flow7_ptA_g/ptA_mLc;
+
+      bloom.elements["veg1_out1"].value = veg1_bloom_g/bloom_mLc;
+      bloom.elements["veg2_out1"].value = veg2_bloom_g/bloom_mLc;
+      bloom.elements["veg3_out1"].value = veg3_bloom_g/bloom_mLc;
+      bloom.elements["flow1_out1"].value = flow1_bloom_g/bloom_mLc;
+      bloom.elements["flow2_out1"].value = flow2_bloom_g/bloom_mLc;
+      bloom.elements["flow3_out1"].value = flow3_bloom_g/bloom_mLc;
+      bloom.elements["flow4_out1"].value = flow4_bloom_g/bloom_mLc;
+      bloom.elements["flow5_out1"].value = flow5_bloom_g/bloom_mLc;
+      bloom.elements["flow6_out1"].value = flow6_bloom_g/bloom_mLc;
+      bloom.elements["flow7_out1"].value = flow7_bloom_g/bloom_mLc;
   }
   //these values are always zero
   ptA.elements["flow8_out1"].value = 0;
