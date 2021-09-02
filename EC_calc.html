@@ -530,7 +530,6 @@ function calculateValues() {
 
     if (input.elements["type"].value == "DtL")
     {
-        document.getElementByID['A_units'].innerHTML = 'Part A g/Gal';
         ptA.elements["veg1_out1"].value = veg1_ptA_g;
         ptA.elements["veg2_out1"].value = veg2_ptA_g;
         ptA.elements["veg3_out1"].value = veg3_ptA_g;
@@ -560,6 +559,8 @@ function calculateValues() {
         bloom.elements["flow5_out1"].value = flow5_blm_g;
         bloom.elements["flow6_out1"].value = flow6_blm_g;
         bloom.elements["flow7_out1"].value = flow7_blm_g;
+
+        document.getElementByID['A_units'].innerHTML = 'Part A g/Gal';
     }
     else if (input.elements["type"].value == "conc")
     {
@@ -595,6 +596,8 @@ function calculateValues() {
       bloom.elements["flow5_out1"].value = flow5_bloom_g/bloom_mLc;
       bloom.elements["flow6_out1"].value = flow6_bloom_g/bloom_mLc;
       bloom.elements["flow7_out1"].value = flow7_bloom_g/bloom_mLc;
+
+      document.getElementByID['A_units'].innerHTML = 'Part A mL/Gal';
   }
   //these values are always zero
   ptA.elements["flow8_out1"].value = 0;
