@@ -562,7 +562,7 @@ function calculateValues() {
         bloom.elements["flow6_out1"].value = flow6_blm_g;
         bloom.elements["flow7_out1"].value = flow7_blm_g;
 
-        document.getElementByID['A_units'].innerHTML = 'Part A g/Gal';
+        document.getElementByID['A_units'].innertext = 'Part A g/Gal';
     }
     else if (input.elements["type"].value == "conc")
     {
@@ -599,7 +599,7 @@ function calculateValues() {
       bloom.elements["flow6_out1"].value = flow6_bloom_g/bloom_mLc;
       bloom.elements["flow7_out1"].value = flow7_bloom_g/bloom_mLc;
 
-      document.getElementByID['A_units'].innerHTML = 'Part A mL/Gal';
+      document.getElementByID['A_units'].innertext = 'Part A mL/Gal';
   }
   //these values are always zero
   ptA.elements["flow8_out1"].value = 0;
