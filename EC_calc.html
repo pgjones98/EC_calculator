@@ -406,6 +406,8 @@ function calculateValues() {
   var bloom = document.forms["EC_Bloom"];
   var totals = document.forms["EC_totals"];
 
+  var A_units = document.getElementByID["A_units"];
+
   var ptA_EC   = 0.322;
   var ptB_EC   = 0.255;
   var blm_EC   = 0.18;
@@ -560,7 +562,7 @@ function calculateValues() {
         bloom.elements["flow6_out1"].value = flow6_blm_g;
         bloom.elements["flow7_out1"].value = flow7_blm_g;
 
-        document.getElementByID['A_units'].innerHTML = 'Part A g/Gal';
+        A_units.innerHTML = 'Part A g/Gal';
     }
     else if (input.elements["type"].value == "conc")
     {
@@ -597,7 +599,7 @@ function calculateValues() {
       bloom.elements["flow6_out1"].value = flow6_bloom_g/bloom_mLc;
       bloom.elements["flow7_out1"].value = flow7_bloom_g/bloom_mLc;
 
-      document.getElementByID['A_units'].innerHTML = 'Part A mL/Gal';
+      A_units.innerHTML = 'Part A mL/Gal';
   }
   //these values are always zero
   ptA.elements["flow8_out1"].value = 0;
