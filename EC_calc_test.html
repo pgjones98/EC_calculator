@@ -419,7 +419,6 @@ function calculateValues() {
   var ptB_flow = 2.18;
   var blm_flow = 2.56;
 
-  var ptA_mLc = 849/3785;
   var ptB_mLc = 570/3785;
   var blm_mLc = 667/3785;
 
@@ -566,38 +565,38 @@ function calculateValues() {
     }
     else if (input.elements["type"].value == "conc")
     {
-      ptA.elements["veg1_out1"].value = Math.round(veg1_ptA_g/ptA_mLc);
-      ptA.elements["veg2_out1"].value = Math.round(veg2_ptA_g/ptA_mLc);
-      ptA.elements["veg3_out1"].value = Math.round(veg3_ptA_g/ptA_mLc);
-      ptA.elements["flow1_out1"].value = Math.round(flow1_ptA_g/ptA_mLc);
-      ptA.elements["flow2_out1"].value = Math.round(flow2_ptA_g/ptA_mLc);
-      ptA.elements["flow3_out1"].value = Math.round(flow3_ptA_g/ptA_mLc);
-      ptA.elements["flow4_out1"].value = Math.round(flow4_ptA_g/ptA_mLc);
-      ptA.elements["flow5_out1"].value = Math.round(flow5_ptA_g/ptA_mLc);
-      ptA.elements["flow6_out1"].value = Math.round(flow6_ptA_g/ptA_mLc);
-      ptA.elements["flow7_out1"].value = Math.round(flow7_ptA_g/ptA_mLc);
+      ptA.elements["veg1_out1"].value = Math.round(veg1_ptA_g/(849/3785));
+      ptA.elements["veg2_out1"].value = Math.round(veg2_ptA_g/(849/3785));
+      ptA.elements["veg3_out1"].value = Math.round(veg3_ptA_g/(849/3785));
+      ptA.elements["flow1_out1"].value = Math.round(flow1_ptA_g/(849/3785));
+      ptA.elements["flow2_out1"].value = Math.round(flow2_ptA_g/(849/3785));
+      ptA.elements["flow3_out1"].value = Math.round(flow3_ptA_g/(849/3785));
+      ptA.elements["flow4_out1"].value = Math.round(flow4_ptA_g/(849/3785));
+      ptA.elements["flow5_out1"].value = Math.round(flow5_ptA_g/(849/3785));
+      ptA.elements["flow6_out1"].value = Math.round(flow6_ptA_g/(849/3785));
+      ptA.elements["flow7_out1"].value = Math.round(flow7_ptA_g/(849/3785));
 
-      ptB.elements["veg1_out1"].value = Math.round(veg1_ptB_g/ptB_mLc);
-      ptB.elements["veg2_out1"].value = Math.round(veg2_ptB_g/ptB_mLc);
-      ptB.elements["veg3_out1"].value = Math.round(veg3_ptB_g/ptB_mLc);
-      ptB.elements["flow1_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow2_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow3_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow4_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow5_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow6_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
-      ptB.elements["flow7_out1"].value = Math.round(flow1_ptB_g/ptB_mLc);
+      ptB.elements["veg1_out1"].value = Math.round(veg1_ptB_g/(570/3785));
+      ptB.elements["veg2_out1"].value = Math.round(veg2_ptB_g/(570/3785));
+      ptB.elements["veg3_out1"].value = Math.round(veg3_ptB_g/(570/3785));
+      ptB.elements["flow1_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow2_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow3_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow4_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow5_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow6_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow7_out1"].value = Math.round(flow1_ptB_g/(570/3785));
 
-      bloom.elements["veg1_out1"].value = Math.round(veg1_bloom_g/bloom_mLc);
-      bloom.elements["veg2_out1"].value = Math.round(veg2_bloom_g/bloom_mLc);
-      bloom.elements["veg3_out1"].value = Math.round(veg3_bloom_g/bloom_mLc);
-      bloom.elements["flow1_out1"].value = Math.round(flow1_bloom_g/bloom_mLc);
-      bloom.elements["flow2_out1"].value = Math.round(flow2_bloom_g/bloom_mLc);
-      bloom.elements["flow3_out1"].value = Math.round(flow3_bloom_g/bloom_mLc);
-      bloom.elements["flow4_out1"].value = Math.round(flow4_bloom_g/bloom_mLc);
-      bloom.elements["flow5_out1"].value = Math.round(flow5_bloom_g/bloom_mLc);
-      bloom.elements["flow6_out1"].value = Math.round(flow6_bloom_g/bloom_mLc);
-      bloom.elements["flow7_out1"].value = Math.round(flow7_bloom_g/bloom_mLc);
+      bloom.elements["veg1_out1"].value = Math.round(veg1_bloom_g/(667/3785));
+      bloom.elements["veg2_out1"].value = Math.round(veg2_bloom_g/(667/3785));
+      bloom.elements["veg3_out1"].value = Math.round(veg3_bloom_g/(667/3785));
+      bloom.elements["flow1_out1"].value = Math.round(flow1_bloom_g/(667/3785));
+      bloom.elements["flow2_out1"].value = Math.round(flow2_bloom_g/(667/3785));
+      bloom.elements["flow3_out1"].value = Math.round(flow3_bloom_g/(667/3785));
+      bloom.elements["flow4_out1"].value = Math.round(flow4_bloom_g/(667/3785));
+      bloom.elements["flow5_out1"].value = Math.round(flow5_bloom_g/(667/3785));
+      bloom.elements["flow6_out1"].value = Math.round(flow6_bloom_g/(667/3785));
+      bloom.elements["flow7_out1"].value = Math.round(flow7_bloom_g/(667/3785));
 
       document.getElementByID['A_units'].innerText = 'Part A mL/Gal';
   }
