@@ -97,7 +97,7 @@
     <fieldset>
         <div style = "float:left">
 
-          <label>Part A   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label>Part A</label><p id="units"></p>
           <p>
           <label>Part A EC</label>
           
@@ -530,6 +530,7 @@ function calculateValues() {
 
     if (input.elements["type"].value == "DtL")
     {
+        ptA.getElementByID["units"].innerHTML = "g/Gal";
         ptA.elements["veg1_out1"].value = veg1_ptA_g;
         ptA.elements["veg2_out1"].value = veg2_ptA_g;
         ptA.elements["veg3_out1"].value = veg3_ptA_g;
