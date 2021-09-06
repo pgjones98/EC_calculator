@@ -679,6 +679,8 @@ function calculateValues() {
         ptA.elements["flow5_out1"].value = Math.round(flow5_ptA_g/(849/3785));
         ptA.elements["flow6_out1"].value = Math.round(flow6_ptA_g/(849/3785));
         ptA.elements["flow7_out1"].value = Math.round(flow7_ptA_g/(849/3785));
+        //This is always zero, pulling a known 0 value
+        ptA.elements["flow8_out1"].value = veg3_blm_out2;
 
         ptB.elements["veg1_out1"].value = Math.round(veg1_ptB_g/(570/3785));
         ptB.elements["veg2_out1"].value = Math.round(veg2_ptB_g/(570/3785));
@@ -690,16 +692,41 @@ function calculateValues() {
         ptB.elements["flow5_out1"].value = Math.round(flow5_ptB_g/(570/3785));
         ptB.elements["flow6_out1"].value = Math.round(flow6_ptB_g/(570/3785));
         ptB.elements["flow7_out1"].value = Math.round(flow7_ptB_g/(570/3785));
-
+        //This is always zero, pulling a known 0 value
+        ptB.elements["flow8_out1"].value = veg3_blm_out2;
 
         //the first 3 weeks need to be a conditionality
-        bloom.elements["flow1_out1"].value = Math.round(flow1_blm_g/(667/3785));
-        bloom.elements["flow2_out1"].value = Math.round(flow2_blm_g/(667/3785));
-        bloom.elements["flow3_out1"].value = Math.round(flow3_blm_g/(667/3785));
+        //if input >= 3: output = regular_calc+1; else output = regular_calc
+        if (input.elements["veg1"].value >= 3)
+        {
+            bloom.elements["flow1_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
+        }
+        else
+        {
+            bloom.elements["flow1_out1"].value = Math.round(flow1_blm_g/(667/3785));
+        }
+        if (input.elements["veg2"].value >= 3)
+        {
+            bloom.elements["flow2_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
+        }
+        else
+        {
+            bloom.elements["flow2_out1"].value = Math.round(flow1_blm_g/(667/3785));
+        }
+        if (input.elements["veg3"].value >= 3)
+        {
+            bloom.elements["flow3_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
+        }
+        else
+        {
+            bloom.elements["flow3_out1"].value = Math.round(flow1_blm_g/(667/3785));
+        }
         bloom.elements["flow4_out1"].value = Math.round(flow4_blm_g/(667/3785));
         bloom.elements["flow5_out1"].value = Math.round(flow5_blm_g/(667/3785));
         bloom.elements["flow6_out1"].value = Math.round(flow6_blm_g/(667/3785));
         bloom.elements["flow7_out1"].value = Math.round(flow7_blm_g/(667/3785));
+        //This is always zero, pulling a known 0 value
+        bloom.elements["flow8_out1"].value = veg3_blm_out2;
 
         ptA.elements["A_units"].value = "mL/Gal";
         ptB.elements["B_units"].value = "mL/Gal";
