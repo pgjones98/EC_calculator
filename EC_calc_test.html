@@ -1,913 +1,946 @@
 <style>
-    input[type="number"] {
-       width:70px;
-    }
+  input[type="number"] {
+     width:70px;
+  }
 </style>
-    
-    <form action="" id="EC_in" onsubmit="return false;">
-        <label>Custom Feed Chart</label>
-        <div style = "clear">
-              <label >Type</label>
-          </div>
-          <select id="type" name="type">
-            <option value="None">Select Type</option>
-            <option value="DtL">Direct to Reservoir (g/Gal)</option>
-            <option value="conc">Stock Concentrate (mL/Gal)</option>
-            </select>
-        <fieldset>
-        
-          <div style = "float:left">
-            EC Targets:
-            <br/>
-            <label>Week</label>
-            
-          </div>
-          <!--using style float:left until the last input so all of the inputs line up properly-->
-          <!--Then just putting in all of the inputs-->
-          <div style = "float:left">
-            <input type="number"  id="veg1" name="veg1">
-            <br/>
-            <label>Veg 1</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="veg2" name="veg2">
-            <br/>
-            <label>Veg 2</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="veg3" name="veg3">
-            <br/>
-            <label>Veg 3+</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow1" name="flow1">
-            <br/>
-            <label>Flower 1</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow2" name="flow2">
-            <br/>
-            <label>Flower 2</label>
-          </div>
-    
-          <div style ="float:left">
-            <input type="number"  id="flow3" name="flow3">
-            <br/>
-            <label>Flower 3</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow4" name="flow4">
-            <br/>
-            <label>Flower 4</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow5" name="flow5">
-            <br/>
-            <label>Flower 5</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow6" name="flow6">
-            <br/>
-            <label>Flower 6</label>
-          </div>
-    
-          <div style = "float:left">
-            <input type="number"  id="flow7" name="flow7">
-            <br/>
-            <label>Flower 7</label>
-          </div>
-    
-          <div style = "float:left">
-            <label>Flush</label>
-            <br/>
-            <label>Flower 8</label>
-          </div>
-
-        </fieldset>
-    
-    </form>
-    <form action="" id="EC_partA" onsubmit="return false;">
-    <fieldset>
+  
+  <form action="" id="EC_in" onsubmit="return false;">
+      <label>Custom Feed Chart</label>
+      <div style = "clear">
+            <label >Type</label>
+        </div>
+        <select id="type" name="type">
+          <option value="None">Select Type</option>
+          <option value="DtL">Direct to Reservoir (g/Gal)</option>
+          <option value="conc">Stock Concentrate (mL/Gal)</option>
+          </select>
+      <fieldset>
+      
         <div style = "float:left">
-
-            <label>Part A</label>
-            <br>
-            <input type = "text" id = "A_units" readonly = "readonly" size = 5%>
-            <br>
-            <label>Part A EC</label>
+          EC Targets:
+          <br/>
+          <label>Week</label>
           
         </div>
         <!--using style float:left until the last input so all of the inputs line up properly-->
         <!--Then just putting in all of the inputs-->
         <div style = "float:left">
-          <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
+          <input type="number"  id="veg1" name="veg1">
+          <br/>
+          <label>Veg 1</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
-
+          <input type="number"  id="veg2" name="veg2">
+          <br/>
+          <label>Veg 2</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
+          <input type="number"  id="veg3" name="veg3">
+          <br/>
+          <label>Veg 3+</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
-
+          <input type="number"  id="flow1" name="flow1">
+          <br/>
+          <label>Flower 1</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
+          <input type="number"  id="flow2" name="flow2">
+          <br/>
+          <label>Flower 2</label>
         </div>
   
         <div style ="float:left">
-          <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
+          <input type="number"  id="flow3" name="flow3">
+          <br/>
+          <label>Flower 3</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
+          <input type="number"  id="flow4" name="flow4">
+          <br/>
+          <label>Flower 4</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
+          <input type="number"  id="flow5" name="flow5">
+          <br/>
+          <label>Flower 5</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
+          <input type="number"  id="flow6" name="flow6">
+          <br/>
+          <label>Flower 6</label>
         </div>
   
         <div style = "float:left">
-          <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
+          <input type="number"  id="flow7" name="flow7">
+          <br/>
+          <label>Flower 7</label>
         </div>
   
-        <div style = "float:left">
-          <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
-          <p>
-          <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
+        <div style = "float">
+          <label>Flush</label>
+          <br/>
+          <label>Flower 8</label>
         </div>
-    
-    </fieldset>
+
+      </fieldset>
+  
   </form>
-  <form action="" id="EC_partB" onsubmit="return false;">
-    <fieldset>
-    <div style = "float:left">
+  <form action="" id="EC_partA" onsubmit="return false;">
+  <fieldset>
+      <div style = "float:left">
 
-        <label>Part B   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <br>
-        <input type = "text" id = "B_units" readonly = "readonly" size = 5%>
-        <br>
-        <label>Part B EC</label>
-      
-    </div>
-    <!--using style float:left until the last input so all of the inputs line up properly-->
-    <!--Then just putting in all of the inputs-->
-    <div style = "float:left">
-      <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
-    </div>
+          <label>Part A</label>
+          <br>
+          <input type = "text" id = "A_units" readonly = "readonly" size = 5%>
+          <br>
+          <label>Part A EC</label>
+        
+      </div>
+      <!--using style float:left until the last input so all of the inputs line up properly-->
+      <!--Then just putting in all of the inputs-->
+      <div style = "float:left">
+        <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
+      <div style = "float:left">
+        <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
 
-    </div>
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
+      <div style = "float:left">
+        <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
 
-    </div>
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
+      </div>
 
-    <div style ="float:left">
-      <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
-    </div>
+      <div style ="float:left">
+        <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
-    </div>
+      <div style = "float:left">
+        <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
+      </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
-    </div>
+      <div style = "float">
+        <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
+        <br/>
+        <br/>
+        <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
+      </div>
+  
+  </fieldset>
+</form>
+<form action="" id="EC_partB" onsubmit="return false;">
+  <fieldset>
+  <div style = "float:left">
+
+      <label>Part B   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <br>
+      <input type = "text" id = "B_units" readonly = "readonly" size = 5%>
+      <br>
+      <label>Part B EC</label>
+    
+  </div>
+  <!--using style float:left until the last input so all of the inputs line up properly-->
+  <!--Then just putting in all of the inputs-->
+  <div style = "float:left">
+    <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
+    <br/>
+<br/>
+    <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
+    <br/>
+<br/>
+    <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
+
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
+
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
+  </div>
+
+  <div style ="float:left">
+    <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
+  </div>
+
+  <div style = "float:left">
+    <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
+  </div>
 
 </fieldset>
 </form>
 <form action="" id="EC_Bloom" onsubmit="return false;">
 <fieldset>
-    <div style = "float:left">
+  <div style = "float:left">
 
-      <label>Bloom   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <br>
-        <input type = "text" id = "blm_units" readonly = "readonly" size = 5%>
-        <br>
-      <label>Bloom EC</label>
-      
-    </div>
-    <!--using style float:left until the last input so all of the inputs line up properly-->
-    <!--Then just putting in all of the inputs-->
-    <div style = "float:left">
-      <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
-    </div>
+    <label>Bloom   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <br>
+      <input type = "text" id = "blm_units" readonly = "readonly" size = 5%>
+      <br>
+    <label>Bloom EC</label>
+    
+  </div>
+  <!--using style float:left until the last input so all of the inputs line up properly-->
+  <!--Then just putting in all of the inputs-->
+  <div style = "float:left">
+    <input type="number"  id="veg1_out1" name="veg1_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="veg1_out2" name="veg1_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
+  <div style = "float:left">
+    <input type="number"  id="veg2_out1" name="veg2_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="veg2_out2" name="veg2_out2" readonly = "readonly">
 
-    </div>
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="veg3_out1" name="veg3_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="veg3_out2" name="veg3_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
+  <div style = "float:left">
+    <input type="number"  id="flow1_out1" name="flow1_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow1_out2" name="flow1_out2" readonly = "readonly">
 
-    </div>
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow2_out1" name="flow2_ptA_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow2_out2" name="flow2_out2" readonly = "readonly">
+  </div>
 
-    <div style ="float:left">
-      <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
-    </div>
+  <div style ="float:left">
+    <input type="number"  id="flow3_out1" name="flow3_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow3_out2" name="flow3_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow4_out1" name="flow4_ptA_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow4_out2" name="flow4_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow5_out1" name="flow5_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow5_out2" name="flow5_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow6_out1" name="flow6_out1" readonly = "readonly">
+    <br/>
+    <br/>
+    <input type="number"  id="flow6_out2" name="flow6_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow7_out1" name="flow7_out1" readonly = "readonly">
+    <br/>
+        <br/>
+    <input type="number"  id="flow7_out2" name="flow7_out2" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
-      <p>
-      <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow8_out1" name="flow8_out1" readonly = "readonly">
+    <br/>
+        <br/>
+    <input type="number"  id="flow8_out2" name="flow8_out2" readonly = "readonly">
+  </div>
 
 </fieldset>
 </form>
 
 <form action="" id="Si" onsubmit="return false;">
 <fieldset>
-    <div style = float:left>
-        <label style = font-size:13px> Front Row Si &nbsp;</label>
-        <br>
-        <input type = "text" id = "si_units" readonly = "readonly" size = 5%>
-        <br>
+  <div style = float:left>
+      <label style = font-size:13px> Front Row Si &nbsp;</label>
+      <br>
+      <input type = "text" id = "si_units" readonly = "readonly" size = 5%>
+      <br>
+  </div>
+
+  <div style = "float:left">
+      <input type="number"  id="veg1" name="veg1" readonly = "readonly">
     </div>
 
     <div style = "float:left">
-        <input type="number"  id="veg1" name="veg1" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="veg2" name="veg2" readonly = "readonly">
-  
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="veg3" name="veg3" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow1" name="flow1" readonly = "readonly">
-  
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow2" name="flow2" readonly = "readonly">
-      </div>
-  
-      <div style ="float:left">
-        <input type="number"  id="flow3" name="flow3" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow4" name="flow4" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow5" name="flow5" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow6" name="flow6" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow7" name="flow7" readonly = "readonly">
-      </div>
-  
-      <div style = "float:left">
-        <input type="number"  id="flow8" name="flow8" readonly = "readonly">
-      </div>
+      <input type="number"  id="veg2" name="veg2" readonly = "readonly">
+
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="veg3" name="veg3" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow1" name="flow1" readonly = "readonly">
+
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow2" name="flow2" readonly = "readonly">
+    </div>
+
+    <div style ="float:left">
+      <input type="number"  id="flow3" name="flow3" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow4" name="flow4" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow5" name="flow5" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow6" name="flow6" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow7" name="flow7" readonly = "readonly">
+    </div>
+
+    <div style = "float:left">
+      <input type="number"  id="flow8" name="flow8" readonly = "readonly">
+    </div>
 
 </fieldset>
 </form>
 
 <form action="" id="EC_totals" onsubmit="return false;">
 <fieldset>
-    <div style = "float:left">
+  <div style = "float:left">
 
-      <label>Total EC&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      
-    </div>
-    <!--using style float:left until the last input so all of the inputs line up properly-->
-    <!--Then just putting in all of the inputs-->
-    <div style = "float:left">
-      <input type="number"  id="veg1_total" name="veg1_total" readonly = "readonly">
-    </div>
+    <label>Total EC&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    
+  </div>
+  <!--using style float:left until the last input so all of the inputs line up properly-->
+  <!--Then just putting in all of the inputs-->
+  <div style = "float:left">
+    <input type="number"  id="veg1_total" name="veg1_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg2_total" name="veg2_total" readonly = "readonly">
+  <div style = "float:left">
+    <input type="number"  id="veg2_total" name="veg2_total" readonly = "readonly">
 
-    </div>
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="veg3_total" name="veg3_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="veg3_total" name="veg3_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow1_total" name="flow1_total" readonly = "readonly">
+  <div style = "float:left">
+    <input type="number"  id="flow1_total" name="flow1_total" readonly = "readonly">
 
-    </div>
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow2_total" name="flow2_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow2_total" name="flow2_total" readonly = "readonly">
+  </div>
 
-    <div style ="float:left">
-      <input type="number"  id="flow3_total" name="flow3_total" readonly = "readonly">
-    </div>
+  <div style ="float:left">
+    <input type="number"  id="flow3_total" name="flow3_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow4_total" name="flow4_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow4_total" name="flow4_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow5_total" name="flow5_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow5_total" name="flow5_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow6_total" name="flow6_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow6_total" name="flow6_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow7_total" name="flow7_total" readonly = "readonly">
-    </div>
+  <div style = "float:left">
+    <input type="number"  id="flow7_total" name="flow7_total" readonly = "readonly">
+  </div>
 
-    <div style = "float:left">
-      <input type="number"  id="flow8_total" name="flow8_total" readonly = "readonly">
-    </div>
-	<br/>
-  <br/>
-	<button id="calculate_button" type="button" onclick="calculateValues();">Calculate</button>
+  <div style = "float:left">
+    <input type="number"  id="flow8_total" name="flow8_total" readonly = "readonly">
+  </div>
+<br/>
+<br/>
+<button id="calculate_button" type="button" onclick="calculateValues();">Calculate</button>
 </fieldset>
 </form>
 
 <button id="calculate_button" type="button" onclick="window.print()";>Print</button>
 
 <script language = Javascript>
-    document.getElementByID["calculate_button"].click(calculateValues());
+  document.getElementByID["calculate_button"].click(calculateValues());
 
 function calculateValues() {
-    var input = document.forms["EC_in"];
-    var ptA = document.forms["EC_partA"];
-    var ptB = document.forms["EC_partB"];
-    var bloom = document.forms["EC_Bloom"];
-    var si = document.forms["Si"];
-    var totals = document.forms["EC_totals"];
+  var input = document.forms["EC_in"];
+  var ptA = document.forms["EC_partA"];
+  var ptB = document.forms["EC_partB"];
+  var bloom = document.forms["EC_Bloom"];
+  var si = document.forms["Si"];
+  var totals = document.forms["EC_totals"];
 
-    
+  
 
-    var ptA_EC   = 0.322;
-    var ptB_EC   = 0.255;
-    var blm_EC   = 0.18;
-    
-    var ptA_veg  = 4.04;
-    var ptB_veg  = 2.7;
-        
-    var ptA_flow = 3.25;
-    var ptB_flow = 2.18;
-    var blm_flow = 2.56;
+  var ptA_EC   = 0.322;
+  var ptB_EC   = 0.255;
+  var blm_EC   = 0.18;
+  
+  var ptA_veg  = 4.04;
+  var ptB_veg  = 2.7;
+      
+  var ptA_flow = 3.25;
+  var ptB_flow = 2.18;
+  var blm_flow = 2.56;
 
-    var ptB_mLc = 570/3785;
-    var blm_mLc = 667/3785;
+  var ptB_mLc = 570/3785;
+  var blm_mLc = 667/3785;
 
-    var veg1_ptA_out2 = ((input.elements["veg1"].value/2)*(ptA_EC * ptA_veg));
-    var veg2_ptA_out2 = ((input.elements["veg2"].value/2)*(ptA_EC * ptA_veg));
-    var veg3_ptA_out2 = ((input.elements["veg3"].value/2)*(ptA_EC * ptA_veg));
-    var flow1_ptA_out2 = ((input.elements["flow1"].value/2)*(ptA_EC * ptA_flow));
-    var flow2_ptA_out2 = ((input.elements["flow2"].value/2)*(ptA_EC * ptA_flow));
-    var flow3_ptA_out2 = ((input.elements["flow3"].value/2)*(ptA_EC * ptA_flow));
-    var flow4_ptA_out2 = ((input.elements["flow4"].value/2)*(ptA_EC * ptA_flow * 0.95));
-    var flow5_ptA_out2 = ((input.elements["flow5"].value/2)*(ptA_EC * ptA_flow * 0.95));
-    var flow6_ptA_out2 = ((input.elements["flow6"].value/2)*(ptA_EC * ptA_flow * 0.9));
-    var flow7_ptA_out2 = ((input.elements["flow7"].value/2)*(ptA_EC * ptA_flow * 0.9));
-    
-    var veg1_ptB_out2 = ((input.elements["veg1"].value/2)*(ptB_EC * ptB_veg));
-    var veg2_ptB_out2 = ((input.elements["veg2"].value/2)*(ptB_EC * ptB_veg));
-    var veg3_ptB_out2 = ((input.elements["veg3"].value/2)*(ptB_EC * ptB_veg));
-    var flow1_ptB_out2 = ((input.elements["flow1"].value/2)*(ptB_EC * ptB_flow));
-    var flow2_ptB_out2 = ((input.elements["flow2"].value/2)*(ptB_EC * ptB_flow));
-    var flow3_ptB_out2 = ((input.elements["flow3"].value/2)*(ptB_EC * ptB_flow));
-    var flow4_ptB_out2 = ((input.elements["flow4"].value/2)*(ptB_EC * ptB_flow * 0.95));
-    var flow5_ptB_out2 = ((input.elements["flow5"].value/2)*(ptB_EC * ptB_flow * 0.95));
-    var flow6_ptB_out2 = ((input.elements["flow6"].value/2)*(ptB_EC * ptB_flow * 0.9));
-    var flow7_ptB_out2 = ((input.elements["flow7"].value/2)*(ptB_EC * ptB_flow * 0.9));
-        
-    var veg1_blm_out2 = 0;
-    var veg2_blm_out2 = 0;
-    var veg3_blm_out2 = 0;
-    var flow1_blm_out2 = ((input.elements["flow1"].value/2)*(blm_EC * blm_flow * 0.95));
-    var flow2_blm_out2 = ((input.elements["flow2"].value/2)*(blm_EC * blm_flow * 0.95));
-    var flow3_blm_out2 = ((input.elements["flow3"].value/2)*(blm_EC * blm_flow * 0.95));
-    var flow4_blm_out2 = ((input.elements["flow4"].value/2)*(blm_EC * blm_flow * 1.1));
-    var flow5_blm_out2 = ((input.elements["flow5"].value/2)*(blm_EC * blm_flow * 1.1));
-    var flow6_blm_out2 = ((input.elements["flow6"].value/2)*(blm_EC * blm_flow * 1.15));
-    var flow7_blm_out2 = ((input.elements["flow7"].value/2)*(blm_EC * blm_flow * 1.15));
-    
-    ptA.elements["veg1_out2"].value = veg1_ptA_out2.toFixed(2);
-    ptA.elements["veg2_out2"].value = veg2_ptA_out2.toFixed(2);
-    ptA.elements["veg3_out2"].value = veg3_ptA_out2.toFixed(2);
-    ptA.elements["flow1_out2"].value = flow1_ptA_out2.toFixed(2);
-    ptA.elements["flow2_out2"].value = flow2_ptA_out2.toFixed(2);
-    ptA.elements["flow3_out2"].value = flow3_ptA_out2.toFixed(2);
-    ptA.elements["flow4_out2"].value = flow4_ptA_out2.toFixed(2);
-    ptA.elements["flow5_out2"].value = flow5_ptA_out2.toFixed(2);
-    ptA.elements["flow6_out2"].value = flow6_ptA_out2.toFixed(2);
-    ptA.elements["flow7_out2"].value = flow7_ptA_out2.toFixed(2);
-    
-    ptB.elements["veg1_out2"].value = veg1_ptB_out2.toFixed(2);
-    ptB.elements["veg2_out2"].value = veg2_ptB_out2.toFixed(2);
-    ptB.elements["veg3_out2"].value = veg3_ptB_out2.toFixed(2);
-    ptB.elements["flow1_out2"].value = flow1_ptB_out2.toFixed(2);
-    ptB.elements["flow2_out2"].value = flow2_ptB_out2.toFixed(2);
-    ptB.elements["flow3_out2"].value = flow3_ptB_out2.toFixed(2);
-    ptB.elements["flow4_out2"].value = flow4_ptB_out2.toFixed(2);
-    ptB.elements["flow5_out2"].value = flow5_ptB_out2.toFixed(2);
-    ptB.elements["flow6_out2"].value = flow6_ptB_out2.toFixed(2);
-    ptB.elements["flow7_out2"].value = flow7_ptB_out2.toFixed(2);
-    
-    bloom.elements["veg1_out2"].value = veg1_blm_out2.toFixed(2);
-    bloom.elements["veg2_out2"].value = veg2_blm_out2.toFixed(2);
-    bloom.elements["veg3_out2"].value = veg3_blm_out2.toFixed(2);
-    bloom.elements["veg1_out1"].value = veg1_blm_out2.toFixed(2);
-    bloom.elements["veg2_out1"].value = veg2_blm_out2.toFixed(2);
-    bloom.elements["veg3_out1"].value = veg3_blm_out2.toFixed(2);
-    bloom.elements["flow1_out2"].value = flow1_blm_out2.toFixed(2);
-    bloom.elements["flow2_out2"].value = flow2_blm_out2.toFixed(2);
-    bloom.elements["flow3_out2"].value = flow3_blm_out2.toFixed(2);
-    bloom.elements["flow4_out2"].value = flow4_blm_out2.toFixed(2);
-    bloom.elements["flow5_out2"].value = flow5_blm_out2.toFixed(2);
-    bloom.elements["flow6_out2"].value = flow6_blm_out2.toFixed(2);
-    bloom.elements["flow7_out2"].value = flow7_blm_out2.toFixed(2);
-    
-    totals.elements["veg1_total"].value = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
-    totals.elements["veg2_total"].value = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
-    totals.elements["veg3_total"].value = (Number(veg3_ptA_out2) + Number(veg3_ptB_out2)).toFixed(2);
-    totals.elements["flow1_total"].value = (Number(flow1_ptA_out2) + Number(flow1_ptB_out2) + Number(flow1_blm_out2)).toFixed(2);
-    totals.elements["flow2_total"].value = (Number(flow2_ptA_out2) + Number(flow2_ptB_out2) + Number(flow2_blm_out2)).toFixed(2);
-    totals.elements["flow3_total"].value = (Number(flow3_ptA_out2) + Number(flow3_ptB_out2) + Number(flow3_blm_out2)).toFixed(2);
-    totals.elements["flow4_total"].value = (Number(flow4_ptA_out2) + Number(flow4_ptB_out2) + Number(flow4_blm_out2)).toFixed(2);
-    totals.elements["flow5_total"].value = (Number(flow5_ptA_out2) + Number(flow5_ptB_out2) + Number(flow5_blm_out2)).toFixed(2);
-    totals.elements["flow6_total"].value = (Number(flow6_ptA_out2) + Number(flow6_ptB_out2) + Number(flow6_blm_out2)).toFixed(2);
-    totals.elements["flow7_total"].value = (Number(flow7_ptA_out2) + Number(flow7_ptB_out2) + Number(flow7_blm_out2)).toFixed(2);
-    
-    //these values are always zero
-    ptA.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
-    ptB.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
-    bloom.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
-    totals.elements["flow8_total"].value = veg3_blm_out2.toFixed(2);
+  var veg1_ptA_out2 = ((input.elements["veg1"].value/2)*(ptA_EC * ptA_veg));
+  var veg2_ptA_out2 = ((input.elements["veg2"].value/2)*(ptA_EC * ptA_veg));
+  var veg3_ptA_out2 = ((input.elements["veg3"].value/2)*(ptA_EC * ptA_veg));
+  var flow1_ptA_out2 = ((input.elements["flow1"].value/2)*(ptA_EC * ptA_flow));
+  var flow2_ptA_out2 = ((input.elements["flow2"].value/2)*(ptA_EC * ptA_flow));
+  var flow3_ptA_out2 = ((input.elements["flow3"].value/2)*(ptA_EC * ptA_flow));
+  var flow4_ptA_out2 = ((input.elements["flow4"].value/2)*(ptA_EC * ptA_flow * 0.95));
+  var flow5_ptA_out2 = ((input.elements["flow5"].value/2)*(ptA_EC * ptA_flow * 0.95));
+  var flow6_ptA_out2 = ((input.elements["flow6"].value/2)*(ptA_EC * ptA_flow * 0.9));
+  var flow7_ptA_out2 = ((input.elements["flow7"].value/2)*(ptA_EC * ptA_flow * 0.9));
+  
+  var veg1_ptB_out2 = ((input.elements["veg1"].value/2)*(ptB_EC * ptB_veg));
+  var veg2_ptB_out2 = ((input.elements["veg2"].value/2)*(ptB_EC * ptB_veg));
+  var veg3_ptB_out2 = ((input.elements["veg3"].value/2)*(ptB_EC * ptB_veg));
+  var flow1_ptB_out2 = ((input.elements["flow1"].value/2)*(ptB_EC * ptB_flow));
+  var flow2_ptB_out2 = ((input.elements["flow2"].value/2)*(ptB_EC * ptB_flow));
+  var flow3_ptB_out2 = ((input.elements["flow3"].value/2)*(ptB_EC * ptB_flow));
+  var flow4_ptB_out2 = ((input.elements["flow4"].value/2)*(ptB_EC * ptB_flow * 0.95));
+  var flow5_ptB_out2 = ((input.elements["flow5"].value/2)*(ptB_EC * ptB_flow * 0.95));
+  var flow6_ptB_out2 = ((input.elements["flow6"].value/2)*(ptB_EC * ptB_flow * 0.9));
+  var flow7_ptB_out2 = ((input.elements["flow7"].value/2)*(ptB_EC * ptB_flow * 0.9));
+      
+  var veg1_blm_out2 = 0;
+  var veg2_blm_out2 = 0;
+  var veg3_blm_out2 = 0;
+  var flow1_blm_out2 = ((input.elements["flow1"].value/2)*(blm_EC * blm_flow * 0.95));
+  var flow2_blm_out2 = ((input.elements["flow2"].value/2)*(blm_EC * blm_flow * 0.95));
+  var flow3_blm_out2 = ((input.elements["flow3"].value/2)*(blm_EC * blm_flow * 0.95));
+  var flow4_blm_out2 = ((input.elements["flow4"].value/2)*(blm_EC * blm_flow * 1.1));
+  var flow5_blm_out2 = ((input.elements["flow5"].value/2)*(blm_EC * blm_flow * 1.1));
+  var flow6_blm_out2 = ((input.elements["flow6"].value/2)*(blm_EC * blm_flow * 1.15));
+  var flow7_blm_out2 = ((input.elements["flow7"].value/2)*(blm_EC * blm_flow * 1.15));
+  
+  ptA.elements["veg1_out2"].value = veg1_ptA_out2.toFixed(2);
+  ptA.elements["veg2_out2"].value = veg2_ptA_out2.toFixed(2);
+  ptA.elements["veg3_out2"].value = veg3_ptA_out2.toFixed(2);
+  ptA.elements["flow1_out2"].value = flow1_ptA_out2.toFixed(2);
+  ptA.elements["flow2_out2"].value = flow2_ptA_out2.toFixed(2);
+  ptA.elements["flow3_out2"].value = flow3_ptA_out2.toFixed(2);
+  ptA.elements["flow4_out2"].value = flow4_ptA_out2.toFixed(2);
+  ptA.elements["flow5_out2"].value = flow5_ptA_out2.toFixed(2);
+  ptA.elements["flow6_out2"].value = flow6_ptA_out2.toFixed(2);
+  ptA.elements["flow7_out2"].value = flow7_ptA_out2.toFixed(2);
+  
+  ptB.elements["veg1_out2"].value = veg1_ptB_out2.toFixed(2);
+  ptB.elements["veg2_out2"].value = veg2_ptB_out2.toFixed(2);
+  ptB.elements["veg3_out2"].value = veg3_ptB_out2.toFixed(2);
+  ptB.elements["flow1_out2"].value = flow1_ptB_out2.toFixed(2);
+  ptB.elements["flow2_out2"].value = flow2_ptB_out2.toFixed(2);
+  ptB.elements["flow3_out2"].value = flow3_ptB_out2.toFixed(2);
+  ptB.elements["flow4_out2"].value = flow4_ptB_out2.toFixed(2);
+  ptB.elements["flow5_out2"].value = flow5_ptB_out2.toFixed(2);
+  ptB.elements["flow6_out2"].value = flow6_ptB_out2.toFixed(2);
+  ptB.elements["flow7_out2"].value = flow7_ptB_out2.toFixed(2);
+  
+  bloom.elements["veg1_out2"].value = veg1_blm_out2.toFixed(2);
+  bloom.elements["veg2_out2"].value = veg2_blm_out2.toFixed(2);
+  bloom.elements["veg3_out2"].value = veg3_blm_out2.toFixed(2);
+  bloom.elements["veg1_out1"].value = veg1_blm_out2.toFixed(2);
+  bloom.elements["veg2_out1"].value = veg2_blm_out2.toFixed(2);
+  bloom.elements["veg3_out1"].value = veg3_blm_out2.toFixed(2);
+  bloom.elements["flow1_out2"].value = flow1_blm_out2.toFixed(2);
+  bloom.elements["flow2_out2"].value = flow2_blm_out2.toFixed(2);
+  bloom.elements["flow3_out2"].value = flow3_blm_out2.toFixed(2);
+  bloom.elements["flow4_out2"].value = flow4_blm_out2.toFixed(2);
+  bloom.elements["flow5_out2"].value = flow5_blm_out2.toFixed(2);
+  bloom.elements["flow6_out2"].value = flow6_blm_out2.toFixed(2);
+  bloom.elements["flow7_out2"].value = flow7_blm_out2.toFixed(2);
+  
+  totals.elements["veg1_total"].value = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
+  totals.elements["veg2_total"].value = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
+  totals.elements["veg3_total"].value = (Number(veg3_ptA_out2) + Number(veg3_ptB_out2)).toFixed(2);
+  totals.elements["flow1_total"].value = (Number(flow1_ptA_out2) + Number(flow1_ptB_out2) + Number(flow1_blm_out2)).toFixed(2);
+  totals.elements["flow2_total"].value = (Number(flow2_ptA_out2) + Number(flow2_ptB_out2) + Number(flow2_blm_out2)).toFixed(2);
+  totals.elements["flow3_total"].value = (Number(flow3_ptA_out2) + Number(flow3_ptB_out2) + Number(flow3_blm_out2)).toFixed(2);
+  totals.elements["flow4_total"].value = (Number(flow4_ptA_out2) + Number(flow4_ptB_out2) + Number(flow4_blm_out2)).toFixed(2);
+  totals.elements["flow5_total"].value = (Number(flow5_ptA_out2) + Number(flow5_ptB_out2) + Number(flow5_blm_out2)).toFixed(2);
+  totals.elements["flow6_total"].value = (Number(flow6_ptA_out2) + Number(flow6_ptB_out2) + Number(flow6_blm_out2)).toFixed(2);
+  totals.elements["flow7_total"].value = (Number(flow7_ptA_out2) + Number(flow7_ptB_out2) + Number(flow7_blm_out2)).toFixed(2);
+  
+  //these values are always zero
+  ptA.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
+  ptB.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
+  bloom.elements["flow8_out2"].value = veg3_blm_out2.toFixed(2);
+  totals.elements["flow8_total"].value = veg3_blm_out2.toFixed(2);
 
-    var veg1_ptA_g = ((veg1_ptA_out2)/ptA_EC);
-    var veg2_ptA_g = ((veg2_ptA_out2)/ptA_EC);
-    var veg3_ptA_g = ((veg3_ptA_out2)/ptA_EC);
-    var flow1_ptA_g = ((flow1_ptA_out2)/ptA_EC);
-    var flow2_ptA_g = ((flow2_ptA_out2)/ptA_EC);
-    var flow3_ptA_g = ((flow3_ptA_out2)/ptA_EC);
-    var flow4_ptA_g = ((flow4_ptA_out2)/ptA_EC);
-    var flow5_ptA_g = ((flow5_ptA_out2)/ptA_EC);
-    var flow6_ptA_g = ((flow6_ptA_out2)/ptA_EC);
-    var flow7_ptA_g = ((flow7_ptA_out2)/ptA_EC);
-    
-    var veg1_ptB_g = ((veg1_ptB_out2)/ptB_EC);
-    var veg2_ptB_g = ((veg2_ptB_out2)/ptB_EC);
-    var veg3_ptB_g = ((veg3_ptB_out2)/ptB_EC);
-    var flow1_ptB_g = ((flow1_ptB_out2)/ptB_EC);
-    var flow2_ptB_g = ((flow2_ptB_out2)/ptB_EC);
-    var flow3_ptB_g = ((flow3_ptB_out2)/ptB_EC);
-    var flow4_ptB_g = ((flow4_ptB_out2)/ptB_EC);
-    var flow5_ptB_g = ((flow5_ptB_out2)/ptB_EC);
-    var flow6_ptB_g = ((flow6_ptB_out2)/ptB_EC);
-    var flow7_ptB_g = ((flow7_ptB_out2)/ptB_EC);
-    
-    var flow1_blm_g = ((flow1_blm_out2)/blm_EC);
-    var flow2_blm_g = ((flow2_blm_out2)/blm_EC);
-    var flow3_blm_g = ((flow3_blm_out2)/blm_EC);
-    var flow4_blm_g = ((flow4_blm_out2)/blm_EC);
-    var flow5_blm_g = ((flow5_blm_out2)/blm_EC);
-    var flow6_blm_g = ((flow6_blm_out2)/blm_EC);
-    var flow7_blm_g = ((flow7_blm_out2)/blm_EC);
+  var veg1_ptA_g = ((veg1_ptA_out2)/ptA_EC);
+  var veg2_ptA_g = ((veg2_ptA_out2)/ptA_EC);
+  var veg3_ptA_g = ((veg3_ptA_out2)/ptA_EC);
+  var flow1_ptA_g = ((flow1_ptA_out2)/ptA_EC);
+  var flow2_ptA_g = ((flow2_ptA_out2)/ptA_EC);
+  var flow3_ptA_g = ((flow3_ptA_out2)/ptA_EC);
+  var flow4_ptA_g = ((flow4_ptA_out2)/ptA_EC);
+  var flow5_ptA_g = ((flow5_ptA_out2)/ptA_EC);
+  var flow6_ptA_g = ((flow6_ptA_out2)/ptA_EC);
+  var flow7_ptA_g = ((flow7_ptA_out2)/ptA_EC);
+  
+  var veg1_ptB_g = ((veg1_ptB_out2)/ptB_EC);
+  var veg2_ptB_g = ((veg2_ptB_out2)/ptB_EC);
+  var veg3_ptB_g = ((veg3_ptB_out2)/ptB_EC);
+  var flow1_ptB_g = ((flow1_ptB_out2)/ptB_EC);
+  var flow2_ptB_g = ((flow2_ptB_out2)/ptB_EC);
+  var flow3_ptB_g = ((flow3_ptB_out2)/ptB_EC);
+  var flow4_ptB_g = ((flow4_ptB_out2)/ptB_EC);
+  var flow5_ptB_g = ((flow5_ptB_out2)/ptB_EC);
+  var flow6_ptB_g = ((flow6_ptB_out2)/ptB_EC);
+  var flow7_ptB_g = ((flow7_ptB_out2)/ptB_EC);
+  
+  var flow1_blm_g = ((flow1_blm_out2)/blm_EC);
+  var flow2_blm_g = ((flow2_blm_out2)/blm_EC);
+  var flow3_blm_g = ((flow3_blm_out2)/blm_EC);
+  var flow4_blm_g = ((flow4_blm_out2)/blm_EC);
+  var flow5_blm_g = ((flow5_blm_out2)/blm_EC);
+  var flow6_blm_g = ((flow6_blm_out2)/blm_EC);
+  var flow7_blm_g = ((flow7_blm_out2)/blm_EC);
 
-    if (input.elements["type"].value == "DtL")
-    {
-        ptA.elements["veg1_out1"].value = veg1_ptA_g.toFixed(1);
-        ptA.elements["veg2_out1"].value = veg2_ptA_g.toFixed(1);
-        ptA.elements["veg3_out1"].value = veg3_ptA_g.toFixed(1);
-        ptA.elements["flow1_out1"].value = flow1_ptA_g.toFixed(1);
-        ptA.elements["flow2_out1"].value = flow2_ptA_g.toFixed(1);
-        ptA.elements["flow3_out1"].value = flow3_ptA_g.toFixed(1);
-        ptA.elements["flow4_out1"].value = flow4_ptA_g.toFixed(1);
-        ptA.elements["flow5_out1"].value = flow5_ptA_g.toFixed(1);
-        ptA.elements["flow6_out1"].value = flow6_ptA_g.toFixed(1);
-        ptA.elements["flow7_out1"].value = flow7_ptA_g.toFixed(1);
-        //This is always zero, pulling a known 0 value
-        ptA.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
-        
-        ptB.elements["veg1_out1"].value = veg1_ptB_g.toFixed(1);
-        ptB.elements["veg2_out1"].value = veg2_ptB_g.toFixed(1);
-        ptB.elements["veg3_out1"].value = veg3_ptB_g.toFixed(1);
-        ptB.elements["flow1_out1"].value = flow1_ptB_g.toFixed(1);
-        ptB.elements["flow2_out1"].value = flow2_ptB_g.toFixed(1);
-        ptB.elements["flow3_out1"].value = flow3_ptB_g.toFixed(1);
-        ptB.elements["flow4_out1"].value = flow4_ptB_g.toFixed(1);
-        ptB.elements["flow5_out1"].value = flow5_ptB_g.toFixed(1);
-        ptB.elements["flow6_out1"].value = flow6_ptB_g.toFixed(1);
-        ptB.elements["flow7_out1"].value = flow7_ptB_g.toFixed(1);
-        //This is always zero, pulling a known 0 value
-        ptB.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
+  if (input.elements["type"].value == "DtL")
+  {
+      ptA.elements["veg1_out1"].value = veg1_ptA_g.toFixed(1);
+      ptA.elements["veg2_out1"].value = veg2_ptA_g.toFixed(1);
+      ptA.elements["veg3_out1"].value = veg3_ptA_g.toFixed(1);
+      ptA.elements["flow1_out1"].value = flow1_ptA_g.toFixed(1);
+      ptA.elements["flow2_out1"].value = flow2_ptA_g.toFixed(1);
+      ptA.elements["flow3_out1"].value = flow3_ptA_g.toFixed(1);
+      ptA.elements["flow4_out1"].value = flow4_ptA_g.toFixed(1);
+      ptA.elements["flow5_out1"].value = flow5_ptA_g.toFixed(1);
+      ptA.elements["flow6_out1"].value = flow6_ptA_g.toFixed(1);
+      ptA.elements["flow7_out1"].value = flow7_ptA_g.toFixed(1);
+      //This is always zero, pulling a known 0 value
+      ptA.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
+      
+      ptB.elements["veg1_out1"].value = veg1_ptB_g.toFixed(1);
+      ptB.elements["veg2_out1"].value = veg2_ptB_g.toFixed(1);
+      ptB.elements["veg3_out1"].value = veg3_ptB_g.toFixed(1);
+      ptB.elements["flow1_out1"].value = flow1_ptB_g.toFixed(1);
+      ptB.elements["flow2_out1"].value = flow2_ptB_g.toFixed(1);
+      ptB.elements["flow3_out1"].value = flow3_ptB_g.toFixed(1);
+      ptB.elements["flow4_out1"].value = flow4_ptB_g.toFixed(1);
+      ptB.elements["flow5_out1"].value = flow5_ptB_g.toFixed(1);
+      ptB.elements["flow6_out1"].value = flow6_ptB_g.toFixed(1);
+      ptB.elements["flow7_out1"].value = flow7_ptB_g.toFixed(1);
+      //This is always zero, pulling a known 0 value
+      ptB.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
 
-        bloom.elements["flow1_out1"].value = flow1_blm_g.toFixed(1);
-        bloom.elements["flow2_out1"].value = flow2_blm_g.toFixed(1);
-        bloom.elements["flow3_out1"].value = flow3_blm_g.toFixed(1);
-        bloom.elements["flow4_out1"].value = flow4_blm_g.toFixed(1);
-        bloom.elements["flow5_out1"].value = flow5_blm_g.toFixed(1);
-        bloom.elements["flow6_out1"].value = flow6_blm_g.toFixed(1);
-        bloom.elements["flow7_out1"].value = flow7_blm_g.toFixed(1);
-        //This is always zero, pulling a known 0 value
-        bloom.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
+      bloom.elements["flow1_out1"].value = flow1_blm_g.toFixed(1);
+      bloom.elements["flow2_out1"].value = flow2_blm_g.toFixed(1);
+      bloom.elements["flow3_out1"].value = flow3_blm_g.toFixed(1);
+      bloom.elements["flow4_out1"].value = flow4_blm_g.toFixed(1);
+      bloom.elements["flow5_out1"].value = flow5_blm_g.toFixed(1);
+      bloom.elements["flow6_out1"].value = flow6_blm_g.toFixed(1);
+      bloom.elements["flow7_out1"].value = flow7_blm_g.toFixed(1);
+      //This is always zero, pulling a known 0 value
+      bloom.elements["flow8_out1"].value = veg3_blm_out2.toFixed(1);
 
-        ptA.elements["A_units"].value = "g/Gal";
-        ptB.elements["B_units"].value = "g/Gal";
-        bloom.elements["blm_units"].value = "g/Gal";
-    }
-    else if (input.elements["type"].value == "conc")
-    {
-        if (input.elements["veg1"].value == 2.4)
-        {
-            ptA.elements["veg1_out1"].value = 22;
-        }
-        else
-        {
-            ptA.elements["veg1_out1"].value = Math.floor(veg1_ptA_g/(849/3785));
-        }
-        if (input.elements["veg2"].value == 2.4)
-        {
-            ptA.elements["veg2_out1"].value = 22;
-        }
-        else
-        {
-            ptA.elements["veg2_out1"].value = Math.floor(veg2_ptA_g/(849/3785));
-        }
-        if (input.elements["veg3"].value == 2.4)
-        {
-            ptA.elements["veg3_out1"].value = 22;
-        }
-        else
-        {
-            ptA.elements["veg3_out1"].value = Math.floor(veg3_ptA_g/(849/3785));
-        }
-        ptA.elements["flow1_out1"].value = Math.round(flow1_ptA_g/(849/3785));
-        ptA.elements["flow2_out1"].value = Math.round(flow2_ptA_g/(849/3785));
-        ptA.elements["flow3_out1"].value = Math.round(flow3_ptA_g/(849/3785));
-        ptA.elements["flow4_out1"].value = Math.round(flow4_ptA_g/(849/3785));
-        ptA.elements["flow5_out1"].value = Math.round(flow5_ptA_g/(849/3785));
-        ptA.elements["flow6_out1"].value = Math.round(flow6_ptA_g/(849/3785));
-        ptA.elements["flow7_out1"].value = Math.round(flow7_ptA_g/(849/3785));
-        //This is always zero, pulling a known 0 value
-        ptA.elements["flow8_out1"].value = veg3_blm_out2;
+      ptA.elements["A_units"].value = "g/Gal";
+      ptB.elements["B_units"].value = "g/Gal";
+      bloom.elements["blm_units"].value = "g/Gal";
+  }
+  else if (input.elements["type"].value == "conc")
+  {
+      if (input.elements["veg1"].value == 2.4)
+      {
+          ptA.elements["veg1_out1"].value = 22;
+      }
+      else
+      {
+          ptA.elements["veg1_out1"].value = Math.floor(veg1_ptA_g/(849/3785));
+      }
+      if (input.elements["veg2"].value == 2.4)
+      {
+          ptA.elements["veg2_out1"].value = 22;
+      }
+      else
+      {
+          ptA.elements["veg2_out1"].value = Math.floor(veg2_ptA_g/(849/3785));
+      }
+      if (input.elements["veg3"].value == 2.4)
+      {
+          ptA.elements["veg3_out1"].value = 22;
+      }
+      else
+      {
+          ptA.elements["veg3_out1"].value = Math.floor(veg3_ptA_g/(849/3785));
+      }
+      ptA.elements["flow1_out1"].value = Math.round(flow1_ptA_g/(849/3785));
+      ptA.elements["flow2_out1"].value = Math.round(flow2_ptA_g/(849/3785));
+      ptA.elements["flow3_out1"].value = Math.round(flow3_ptA_g/(849/3785));
+      ptA.elements["flow4_out1"].value = Math.round(flow4_ptA_g/(849/3785));
+      ptA.elements["flow5_out1"].value = Math.round(flow5_ptA_g/(849/3785));
+      ptA.elements["flow6_out1"].value = Math.round(flow6_ptA_g/(849/3785));
+      ptA.elements["flow7_out1"].value = Math.round(flow7_ptA_g/(849/3785));
+      //This is always zero, pulling a known 0 value
+      ptA.elements["flow8_out1"].value = veg3_blm_out2;
 
-        ptB.elements["veg1_out1"].value = Math.round(veg1_ptB_g/(570/3785));
-        ptB.elements["veg2_out1"].value = Math.round(veg2_ptB_g/(570/3785));
-        ptB.elements["veg3_out1"].value = Math.round(veg3_ptB_g/(570/3785));
-        ptB.elements["flow1_out1"].value = Math.round(flow1_ptB_g/(570/3785));
-        ptB.elements["flow2_out1"].value = Math.round(flow2_ptB_g/(570/3785));
-        ptB.elements["flow3_out1"].value = Math.round(flow3_ptB_g/(570/3785));
-        ptB.elements["flow4_out1"].value = Math.round(flow4_ptB_g/(570/3785));
-        ptB.elements["flow5_out1"].value = Math.round(flow5_ptB_g/(570/3785));
-        ptB.elements["flow6_out1"].value = Math.round(flow6_ptB_g/(570/3785));
-        ptB.elements["flow7_out1"].value = Math.round(flow7_ptB_g/(570/3785));
-        //This is always zero, pulling a known 0 value
-        ptB.elements["flow8_out1"].value = veg3_blm_out2;
+      ptB.elements["veg1_out1"].value = Math.round(veg1_ptB_g/(570/3785));
+      ptB.elements["veg2_out1"].value = Math.round(veg2_ptB_g/(570/3785));
+      ptB.elements["veg3_out1"].value = Math.round(veg3_ptB_g/(570/3785));
+      ptB.elements["flow1_out1"].value = Math.round(flow1_ptB_g/(570/3785));
+      ptB.elements["flow2_out1"].value = Math.round(flow2_ptB_g/(570/3785));
+      ptB.elements["flow3_out1"].value = Math.round(flow3_ptB_g/(570/3785));
+      ptB.elements["flow4_out1"].value = Math.round(flow4_ptB_g/(570/3785));
+      ptB.elements["flow5_out1"].value = Math.round(flow5_ptB_g/(570/3785));
+      ptB.elements["flow6_out1"].value = Math.round(flow6_ptB_g/(570/3785));
+      ptB.elements["flow7_out1"].value = Math.round(flow7_ptB_g/(570/3785));
+      //This is always zero, pulling a known 0 value
+      ptB.elements["flow8_out1"].value = veg3_blm_out2;
 
-        //the first 3 weeks need to be a conditionality
-        //if input >= 3: output = regular_calc+1; else output = regular_calc
-        if (input.elements["flow1"].value >= 3)
-        {
-            bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785))+1;
-        }
-        else
-        {
-            bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785));
-        }
-        if (input.elements["flow3"].value >= 3)
-        {
-            bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785))+1;
-        }
-        else
-        {
-            bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785));
-        }
-        if (input.elements["flow3"].value >= 3)
-        {
-            bloom.elements["flow3_out1"].value = Math.ceil(flow3_blm_g/(667/3785))+1;
-        }
-        else
-        {
-            bloom.elements["flow3_out1"].value = Math.round(flow3_blm_g/(667/3785));
-        }
-        bloom.elements["flow4_out1"].value = Math.round(flow4_blm_g/(667/3785));
-        bloom.elements["flow5_out1"].value = Math.round(flow5_blm_g/(667/3785));
-        bloom.elements["flow6_out1"].value = Math.round(flow6_blm_g/(667/3785));
-        bloom.elements["flow7_out1"].value = Math.round(flow7_blm_g/(667/3785));
-        //This is always zero, pulling a known 0 value
-        bloom.elements["flow8_out1"].value = veg3_blm_out2;
+      //the first 3 weeks need to be a conditionality
+      //if input >= 3: output = regular_calc+1; else output = regular_calc
+      if (input.elements["flow1"].value >= 3)
+      {
+          bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785));
+      }
+      if (input.elements["flow3"].value >= 3)
+      {
+          bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785));
+      }
+      if (input.elements["flow3"].value >= 3)
+      {
+          bloom.elements["flow3_out1"].value = Math.ceil(flow3_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          bloom.elements["flow3_out1"].value = Math.round(flow3_blm_g/(667/3785));
+      }
+      bloom.elements["flow4_out1"].value = Math.round(flow4_blm_g/(667/3785));
+      bloom.elements["flow5_out1"].value = Math.round(flow5_blm_g/(667/3785));
+      bloom.elements["flow6_out1"].value = Math.round(flow6_blm_g/(667/3785));
+      bloom.elements["flow7_out1"].value = Math.round(flow7_blm_g/(667/3785));
+      //This is always zero, pulling a known 0 value
+      bloom.elements["flow8_out1"].value = veg3_blm_out2;
 
-        ptA.elements["A_units"].value = "mL/Gal";
-        ptB.elements["B_units"].value = "mL/Gal";
-        bloom.elements["blm_units"].value = "mL/Gal";
-    }
+      ptA.elements["A_units"].value = "mL/Gal";
+      ptB.elements["B_units"].value = "mL/Gal";
+      bloom.elements["blm_units"].value = "mL/Gal";
+  }
 
-    if (input.elements["veg1"].value >= 3.5)
-    {
-      si.elements["veg1"].value = 0.125;
-    }
-    else if (input.elements["veg1"].value >= 2.7)
-    {
-      si.elements["veg1"].value = 0.25;
-    }
-    else if (input.elements["veg1"].value >= 2.3)
-    {
-      si.elements["veg1"].value = 0.33;
-    }
-    else
-    {
-      si.elements["veg1"].value = 0.5;
-    }
+  if (input.elements["veg1"].value >= 3.5)
+  {
+    si.elements["veg1"].value = 0.125;
+  }
+  else if (input.elements["veg1"].value >= 2.7)
+  {
+    si.elements["veg1"].value = 0.25;
+  }
+  else if (input.elements["veg1"].value >= 2.3)
+  {
+    si.elements["veg1"].value = 0.33;
+  }
+  else
+  {
+    si.elements["veg1"].value = 0.5;
+  }
 
-    if (input.elements["veg2"].value >= 3.5)
-    {
-        si.elements["veg2"].value = Number(0.125);
-    }
-    else if (input.elements["veg2"].value >= 2.7)
-    {
-        si.elements["veg2"].value = Number(0.25);
-    }
-    else if (input.elements["veg2"].value >= 2.3)
-    {
-        si.elements["veg2"].value = 0.33;
-    }
-    else
-    {
-        si.elements["veg2"].value = 0.5;
-    }
+  if (input.elements["veg2"].value >= 3.5)
+  {
+      si.elements["veg2"].value = Number(0.125);
+  }
+  else if (input.elements["veg2"].value >= 2.7)
+  {
+      si.elements["veg2"].value = Number(0.25);
+  }
+  else if (input.elements["veg2"].value >= 2.3)
+  {
+      si.elements["veg2"].value = 0.33;
+  }
+  else
+  {
+      si.elements["veg2"].value = 0.5;
+  }
 
-    if (input.elements["veg3"].value >= 3.5)
-    {
-        si.elements["veg3"].value = Number(0.125);
-    }
-    else if (input.elements["veg3"].value >= 2.7)
-    {
-        si.elements["veg3"].value = Number(0.25);
-    }
-    else if (input.elements["veg3"].value >= 2.3)
-    {
-        si.elements["veg3"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["veg3"].value = Number(0.5);
-    }
+  if (input.elements["veg3"].value >= 3.5)
+  {
+      si.elements["veg3"].value = Number(0.125);
+  }
+  else if (input.elements["veg3"].value >= 2.7)
+  {
+      si.elements["veg3"].value = Number(0.25);
+  }
+  else if (input.elements["veg3"].value >= 2.3)
+  {
+      si.elements["veg3"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["veg3"].value = Number(0.5);
+  }
 
-    if (input.elements["flow1"].value >= 3.5)
-    {
-        si.elements["flow1"].value = Number(0.125);
-    }
-    else if (input.elements["flow1"].value >= 2.7)
-    {
-        si.elements["flow1"].value = Number(0.25);
-    }
-    else if (input.elements["flow1"].value >= 2.3)
-    {
-        si.elements["flow1"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow1"].value = Number(0.5);
-    }
+  if (input.elements["flow1"].value >= 3.5)
+  {
+      si.elements["flow1"].value = Number(0.125);
+  }
+  else if (input.elements["flow1"].value >= 2.7)
+  {
+      si.elements["flow1"].value = Number(0.25);
+  }
+  else if (input.elements["flow1"].value >= 2.3)
+  {
+      si.elements["flow1"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow1"].value = Number(0.5);
+  }
 
-    if (input.elements["flow2"].value >= 3.5)
-    {
-        si.elements["flow2"].value = Number(0.125);
-    }
-    else if (input.elements["flow2"].value >= 2.7)
-    {
-        si.elements["flow2"].value = Number(0.25);
-    }
-    else if (input.elements["flow2"].value >= 2.3)
-    {
-        si.elements["flow2"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow2"].value = Number(0.5);
-    }
+  if (input.elements["flow2"].value >= 3.5)
+  {
+      si.elements["flow2"].value = Number(0.125);
+  }
+  else if (input.elements["flow2"].value >= 2.7)
+  {
+      si.elements["flow2"].value = Number(0.25);
+  }
+  else if (input.elements["flow2"].value >= 2.3)
+  {
+      si.elements["flow2"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow2"].value = Number(0.5);
+  }
 
-    if (input.elements["flow3"].value >= 3.5)
-    {
-        si.elements["flow3"].value = Number(0.125);
-    }
-    else if (input.elements["flow3"].value >= 2.7)
-    {
-        si.elements["flow3"].value = Number(0.25);
-    }
-    else if (input.elements["flow3"].value >= 2.3)
-    {
-        si.elements["flow3"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow3"].value = Number(0.5);
-    }
+  if (input.elements["flow3"].value >= 3.5)
+  {
+      si.elements["flow3"].value = Number(0.125);
+  }
+  else if (input.elements["flow3"].value >= 2.7)
+  {
+      si.elements["flow3"].value = Number(0.25);
+  }
+  else if (input.elements["flow3"].value >= 2.3)
+  {
+      si.elements["flow3"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow3"].value = Number(0.5);
+  }
 
-    if (input.elements["flow4"].value >= 3.5)
-    {
-        si.elements["flow4"].value = Number(0.125);
-    }
-    else if (input.elements["flow4"].value >= 2.7)
-    {
-        si.elements["flow4"].value = Number(0.25);
-    }
-    else if (input.elements["flow4"].value >= 2.3)
-    {
-        si.elements["flow4"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow4"].value = Number(0.5);
-    }
+  if (input.elements["flow4"].value >= 3.5)
+  {
+      si.elements["flow4"].value = Number(0.125);
+  }
+  else if (input.elements["flow4"].value >= 2.7)
+  {
+      si.elements["flow4"].value = Number(0.25);
+  }
+  else if (input.elements["flow4"].value >= 2.3)
+  {
+      si.elements["flow4"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow4"].value = Number(0.5);
+  }
 
-    if (input.elements["flow5"].value >= 3.5)
-    {
-        si.elements["flow5"].value = Number(0.125);
-    }
-    else if (input.elements["flow5"].value >= 2.7)
-    {
-        si.elements["flow5"].value = Number(0.25);
-    }
-    else if (input.elements["flow5"].value >= 2.3)
-    {
-        si.elements["flow5"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow5"].value = Number(0.5);
-    }
+  if (input.elements["flow5"].value >= 3.5)
+  {
+      si.elements["flow5"].value = Number(0.125);
+  }
+  else if (input.elements["flow5"].value >= 2.7)
+  {
+      si.elements["flow5"].value = Number(0.25);
+  }
+  else if (input.elements["flow5"].value >= 2.3)
+  {
+      si.elements["flow5"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow5"].value = Number(0.5);
+  }
 
-    if (input.elements["flow6"].value >= 3.5)
-    {
-        si.elements["flow6"].value = Number(0.125);
-    }
-    else if (input.elements["flow6"].value >= 2.7)
-    {
-        si.elements["flow6"].value = Number(0.25);
-    }
-    else if (input.elements["flow6"].value >= 2.3)
-    {
-        si.elements["flow6"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow6"].value = Number(0.5);
-    }
+  if (input.elements["flow6"].value >= 3.5)
+  {
+      si.elements["flow6"].value = Number(0.125);
+  }
+  else if (input.elements["flow6"].value >= 2.7)
+  {
+      si.elements["flow6"].value = Number(0.25);
+  }
+  else if (input.elements["flow6"].value >= 2.3)
+  {
+      si.elements["flow6"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow6"].value = Number(0.5);
+  }
 
-    if (input.elements["flow7"].value >= 3.5)
-    {
-        si.elements["flow7"].value = Number(0.125);
-    }
-    else if (input.elements["flow7"].value >= 2.7)
-    {
-        si.elements["flow7"].value = Number(0.25);
-    }
-    else if (input.elements["flow7"].value >= 2.3)
-    {
-        si.elements["flow7"].value = Number(0.33);
-    }
-    else
-    {
-        si.elements["flow7"].value = Number(0.5);
-    }
+  if (input.elements["flow7"].value >= 3.5)
+  {
+      si.elements["flow7"].value = Number(0.125);
+  }
+  else if (input.elements["flow7"].value >= 2.7)
+  {
+      si.elements["flow7"].value = Number(0.25);
+  }
+  else if (input.elements["flow7"].value >= 2.3)
+  {
+      si.elements["flow7"].value = Number(0.33);
+  }
+  else
+  {
+      si.elements["flow7"].value = Number(0.5);
+  }
 
-    si.elements["flow8"].value = (0).toFixed(2);
+  si.elements["flow8"].value = (0).toFixed(2);
 
-    si.elements["si_units"].value = 'mL/Gal';
+  si.elements["si_units"].value = 'mL/Gal';
 
 }
 </script>
