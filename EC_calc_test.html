@@ -461,6 +461,8 @@
 </fieldset>
 </form>
 
+<button id="calculate_button" type="button" onclick="window.print()";>Print</button>
+
 <script language = Javascript>
     document.getElementByID["calculate_button"].click(calculateValues());
 
@@ -670,7 +672,7 @@ function calculateValues() {
         }
         else
         {
-            ptA.elements["veg3_out1"].value = Math.floor(veg1_ptA_g/(849/3785));
+            ptA.elements["veg3_out1"].value = Math.floor(veg3_ptA_g/(849/3785));
         }
         ptA.elements["flow1_out1"].value = Math.round(flow1_ptA_g/(849/3785));
         ptA.elements["flow2_out1"].value = Math.round(flow2_ptA_g/(849/3785));
@@ -697,29 +699,29 @@ function calculateValues() {
 
         //the first 3 weeks need to be a conditionality
         //if input >= 3: output = regular_calc+1; else output = regular_calc
-        if (input.elements["veg1"].value >= 3)
+        if (input.elements["flow1"].value >= 3)
         {
-            bloom.elements["flow1_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
+            bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785))+1;
         }
         else
         {
-            bloom.elements["flow1_out1"].value = Math.round(flow1_blm_g/(667/3785));
+            bloom.elements["flow1_out1"].value = Math.ceil(flow1_blm_g/(667/3785));
         }
-        if (input.elements["veg2"].value >= 3)
+        if (input.elements["flow3"].value >= 3)
         {
-            bloom.elements["flow2_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
-        }
-        else
-        {
-            bloom.elements["flow2_out1"].value = Math.round(flow1_blm_g/(667/3785));
-        }
-        if (input.elements["veg3"].value >= 3)
-        {
-            bloom.elements["flow3_out1"].value = Math.round(flow1_blm_g/(667/3785))+1;
+            bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785))+1;
         }
         else
         {
-            bloom.elements["flow3_out1"].value = Math.round(flow1_blm_g/(667/3785));
+            bloom.elements["flow2_out1"].value = Math.ceil(flow2_blm_g/(667/3785));
+        }
+        if (input.elements["flow3"].value >= 3)
+        {
+            bloom.elements["flow3_out1"].value = Math.ceil(flow3_blm_g/(667/3785))+1;
+        }
+        else
+        {
+            bloom.elements["flow3_out1"].value = Math.round(flow3_blm_g/(667/3785));
         }
         bloom.elements["flow4_out1"].value = Math.round(flow4_blm_g/(667/3785));
         bloom.elements["flow5_out1"].value = Math.round(flow5_blm_g/(667/3785));
@@ -732,180 +734,180 @@ function calculateValues() {
         ptB.elements["B_units"].value = "mL/Gal";
         bloom.elements["blm_units"].value = "mL/Gal";
     }
-    
-    si.elements["si_units"].value = "mL/Gal";
 
     if (input.elements["veg1"].value >= 3.5)
     {
-        si.elements["veg1"].value = Number(0.125);
+      si.elements["veg1"].value = 0.125;
+    }
+    else if (input.elements["veg1"].value >= 2.7)
+    {
+      si.elements["veg1"].value = 0.25;
     }
     else if (input.elements["veg1"].value >= 2.3)
     {
-        si.elements["veg1"].value = Number(0.25);
-    }
-    else if (inputs.elements["veg1"].value >= 2.3)
-    {
-        si.elements["veg1"].value = Number(0.5);
+      si.elements["veg1"].value = 0.33;
     }
     else
     {
-        si.elements["veg1"].value = Number(1);
+      si.elements["veg1"].value = 0.5;
     }
 
     if (input.elements["veg2"].value >= 3.5)
     {
         si.elements["veg2"].value = Number(0.125);
     }
-    else if (input.elements["veg2"].value >= 2.3)
+    else if (input.elements["veg2"].value >= 2.7)
     {
         si.elements["veg2"].value = Number(0.25);
     }
-    else if (inputs.elements["veg2"].value >= 2.3)
+    else if (input.elements["veg2"].value >= 2.3)
     {
-        si.elements["veg2"].value = Number(0.5);
+        si.elements["veg2"].value = 0.33;
     }
     else
     {
-        si.elements["veg2"].value = Number(1);
+        si.elements["veg2"].value = 0.5;
     }
 
     if (input.elements["veg3"].value >= 3.5)
     {
         si.elements["veg3"].value = Number(0.125);
     }
-    else if (input.elements["veg3"].value >= 2.3)
+    else if (input.elements["veg3"].value >= 2.7)
     {
         si.elements["veg3"].value = Number(0.25);
     }
-    else if (inputs.elements["veg3"].value >= 2.3)
+    else if (input.elements["veg3"].value >= 2.3)
     {
-        si.elements["veg3"].value = Number(0.5);
+        si.elements["veg3"].value = Number(0.33);
     }
     else
     {
-        si.elements["veg3"].value = Number(1);
+        si.elements["veg3"].value = Number(0.5);
     }
 
     if (input.elements["flow1"].value >= 3.5)
     {
         si.elements["flow1"].value = Number(0.125);
     }
-    else if (input.elements["flow1"].value >= 2.3)
+    else if (input.elements["flow1"].value >= 2.7)
     {
         si.elements["flow1"].value = Number(0.25);
     }
-    else if (inputs.elements["flow1"].value >= 2.3)
+    else if (input.elements["flow1"].value >= 2.3)
     {
-        si.elements["flow1"].value = Number(0.5);
+        si.elements["flow1"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow1"].value = Number(1);
+        si.elements["flow1"].value = Number(0.5);
     }
 
     if (input.elements["flow2"].value >= 3.5)
     {
         si.elements["flow2"].value = Number(0.125);
     }
-    else if (input.elements["flow2"].value >= 2.3)
+    else if (input.elements["flow2"].value >= 2.7)
     {
         si.elements["flow2"].value = Number(0.25);
     }
-    else if (inputs.elements["flow2"].value >= 2.3)
+    else if (input.elements["flow2"].value >= 2.3)
     {
-        si.elements["flow2"].value = Number(0.5);
+        si.elements["flow2"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow2"].value = Number(1);
+        si.elements["flow2"].value = Number(0.5);
     }
 
     if (input.elements["flow3"].value >= 3.5)
     {
         si.elements["flow3"].value = Number(0.125);
     }
-    else if (input.elements["flow3"].value >= 2.3)
+    else if (input.elements["flow3"].value >= 2.7)
     {
         si.elements["flow3"].value = Number(0.25);
     }
-    else if (inputs.elements["flow3"].value >= 2.3)
+    else if (input.elements["flow3"].value >= 2.3)
     {
-        si.elements["flow3"].value = Number(0.5);
+        si.elements["flow3"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow3"].value = Number(1);
+        si.elements["flow3"].value = Number(0.5);
     }
 
     if (input.elements["flow4"].value >= 3.5)
     {
         si.elements["flow4"].value = Number(0.125);
     }
-    else if (input.elements["flow4"].value >= 2.3)
+    else if (input.elements["flow4"].value >= 2.7)
     {
         si.elements["flow4"].value = Number(0.25);
     }
-    else if (inputs.elements["flow4"].value >= 2.3)
+    else if (input.elements["flow4"].value >= 2.3)
     {
-        si.elements["flow4"].value = Number(0.5);
+        si.elements["flow4"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow4"].value = Number(1);
+        si.elements["flow4"].value = Number(0.5);
     }
 
     if (input.elements["flow5"].value >= 3.5)
     {
         si.elements["flow5"].value = Number(0.125);
     }
-    else if (input.elements["flow5"].value >= 2.3)
+    else if (input.elements["flow5"].value >= 2.7)
     {
         si.elements["flow5"].value = Number(0.25);
     }
-    else if (inputs.elements["flow5"].value >= 2.3)
+    else if (input.elements["flow5"].value >= 2.3)
     {
-        si.elements["flow5"].value = Number(0.5);
+        si.elements["flow5"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow5"].value = Number(1);
+        si.elements["flow5"].value = Number(0.5);
     }
 
     if (input.elements["flow6"].value >= 3.5)
     {
         si.elements["flow6"].value = Number(0.125);
     }
-    else if (input.elements["flow6"].value >= 2.3)
+    else if (input.elements["flow6"].value >= 2.7)
     {
         si.elements["flow6"].value = Number(0.25);
     }
-    else if (inputs.elements["flow6"].value >= 2.3)
+    else if (input.elements["flow6"].value >= 2.3)
     {
-        si.elements["flow6"].value = Number(0.5);
+        si.elements["flow6"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow6"].value = Number(1);
+        si.elements["flow6"].value = Number(0.5);
     }
 
     if (input.elements["flow7"].value >= 3.5)
     {
         si.elements["flow7"].value = Number(0.125);
     }
-    else if (input.elements["flow7"].value >= 2.3)
+    else if (input.elements["flow7"].value >= 2.7)
     {
         si.elements["flow7"].value = Number(0.25);
     }
-    else if (inputs.elements["flow7"].value >= 2.3)
+    else if (input.elements["flow7"].value >= 2.3)
     {
-        si.elements["flow7"].value = Number(0.5);
+        si.elements["flow7"].value = Number(0.33);
     }
     else
     {
-        si.elements["flow7"].value = Number(1);
+        si.elements["flow7"].value = Number(0.5);
     }
 
-    si.elements["flow8"].value = Number(1);
+    si.elements["flow8"].value = (0).toFixed(2);
+
+    si.elements["si_units"].value = 'mL/Gal';
 
 }
 </script>
